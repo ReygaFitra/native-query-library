@@ -13,7 +13,7 @@ public class AppConfig {
     }
 
     @Bean
-    ConnectionUtil connectionUtil() {
-        return new ConnectionUtil();
+    ConnectionUtil connectionUtil(ConnectionProperties connectionProperties) {
+        return new ConnectionUtil(connectionProperties);
     }
 }

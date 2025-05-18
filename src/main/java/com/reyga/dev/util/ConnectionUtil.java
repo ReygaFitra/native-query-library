@@ -3,12 +3,14 @@ package com.reyga.dev.util;
 import com.reyga.dev.config.properties.ConnectionProperties;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-import org.springframework.beans.factory.annotation.Autowired;
 
 public class ConnectionUtil {
 
-    @Autowired
-    private ConnectionProperties connectionProperties;
+    private final ConnectionProperties connectionProperties;
+
+    public ConnectionUtil(ConnectionProperties connectionProperties) {
+        this.connectionProperties = connectionProperties;
+    }
 
     public HikariDataSource getDataSource() {
 
