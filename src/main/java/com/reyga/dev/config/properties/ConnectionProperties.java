@@ -2,7 +2,7 @@ package com.reyga.dev.config.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "connection.configuration")
+@ConfigurationProperties(prefix = "default.connection.configuration")
 public class ConnectionProperties {
 
     private String driverClassName;
